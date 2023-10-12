@@ -20,11 +20,27 @@ html {
 }
 
 #container{
-      margin-left: 40%;
+     /* margin-bottom: 50px; */
       
 
 }
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Young+Serif&display=swap');
+button{
+      font-size: 20px;
+      font-weight: 700;
+      color: black;
+      font-family: 'Young+Serif&display=swap';
+      box-shadow: 3px 3px 2px 4px lightblue;
+}
 
+ button:hover {
+      background-color: bisque;
+      font-size: 20px;
+      font-weight: 700;
+      color: rgb(22, 107, 93);
+      font-family: 'Young+Serif&display=swap';
+      box-shadow: 3px 3px 2px 4px rgb(215, 189, 140);
+}
 
 .text{
       font-family: 'Merriweather:ital,wght@1,700&display=swap';
