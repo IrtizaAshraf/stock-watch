@@ -42,12 +42,12 @@ stops.addEventListener('click' , ()=>{
 reset.addEventListener('click' , ()=>{
     clearInterval(interval);
     seconds = 0
-    div.innerHTML = '00'
+    div.innerHTML = '0'
 
     minute = 0;
-    mint.innerHTML = '00 :'
+    mint.innerHTML = '0'
     hours = 0;
-    hour.innerHTML = '00 :'
+    hour.innerHTML = '0'
     start.disabled = false
 })
 
