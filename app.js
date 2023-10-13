@@ -13,18 +13,41 @@ let hours = 0;
 let interval;
 start.addEventListener('click', () => {
       interval = setInterval(() => {
-          seconds += 1
-          div.innerHTML = seconds
+        //   seconds += 1
+          if (seconds === 60) {
+            seconds = 1;
+        }
+        else {
+            seconds += 1;
+        }
+
+        if (seconds < 10) {
+            div.innerHTML = `0${seconds}`;
+        }
+        else {
+            div.innerHTML = seconds;
+        }
+        //   div.innerHTML = `0${seconds}`
           if (seconds === 60) {
               minute += 1;
               mint.innerHTML = minute
               seconds = 0;
+              if (seconds < 10) {
+                mint.innerHTML = `0${minute}`;
+            }
+            else {
+                mint.innerHTML = minute;
+            }
           }
   
           if (minute === 60) {
               hours += 1;
-              hour.innerHTML = hours
-              minute = 0;
+              if (seconds < 10) {
+                mint.innerHTML = `0${hour}`;
+            }
+            else {
+                mint.innerHTML = hours;
+            }
           }
       }, 1000)
       start.disabled = true
@@ -42,12 +65,12 @@ stops.addEventListener('click' , ()=>{
 reset.addEventListener('click' , ()=>{
     clearInterval(interval);
     seconds = 0
-    div.innerHTML = '0'
+    div.innerHTML = '00'
 
     minute = 0;
-    mint.innerHTML = '0'
+    mint.innerHTML = '00'
     hours = 0;
-    hour.innerHTML = '0'
+    hour.innerHTML = '00'
     start.disabled = false
 })
 
