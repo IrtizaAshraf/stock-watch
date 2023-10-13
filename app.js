@@ -11,48 +11,80 @@ let seconds = 0
 let minute = 0;
 let hours = 0;
 let interval;
+let intervalmint;
+let intervalhour;
+
+// start function  exciute ---------- start>
 start.addEventListener('click', () => {
-      interval = setInterval(() => {
-        //   seconds += 1
-          if (seconds === 60) {
-            seconds = 1;
+   // setinterval for second----- start>
+   interval = setInterval(() => {
+       if (seconds === 60) {
+           seconds = 1;
         }
         else {
             seconds += 1;
         }
-
+        
         if (seconds < 10) {
             div.innerHTML = `0${seconds}`;
         }
         else {
             div.innerHTML = seconds;
         }
-        //   div.innerHTML = `0${seconds}`
-          if (seconds === 60) {
-              minute += 1;
-              mint.innerHTML = minute
-              seconds = 0;
-              if (seconds < 10) {
-                mint.innerHTML = `0${minute}`;
-            }
-            else {
-                mint.innerHTML = minute;
-            }
-          }
-  
-          if (minute === 60) {
-              hours += 1;
-              if (seconds < 10) {
-                mint.innerHTML = `0${hour}`;
-            }
-            else {
-                mint.innerHTML = hours;
-            }
-          }
-      }, 1000)
-      start.disabled = true
+
+    }, 1000)
+    // setinterval for second----- end>
+
+    
+    // setinterval for minuts----- start>
+    intervalmint = setInterval(() =>{
+        
+        
+        if (minute === 60) {
+            minute = 1;
+        }
+        else {
+            minute += 1;
+        }
+        
+        if (minute < 10) {
+            mint.innerHTML = `0${minute}`;
+        }
+        else {
+            mint.innerHTML = minute;
+        }
+    },60000)
+    // setinterval for minuts----- end>
+
+    // setinterval for hours----- start>
+
+    intervalhour = setInterval(() =>{
+
+        if (hours === 60) {
+            hours = 1;
+        }
+        else {
+            hours += 1;
+        }
+        
+        if (hours < 10) {
+            hour.innerHTML = `0${hours}`;
+        }
+        else {
+            hour.innerHTML = hours;
+        }
+    },3600000) 
+    
+    // setinterval for hours----- end>
+    
+    start.disabled = true
 })
 
+// start function  exciute ---------- end>
+
+
+
+// stop function  exciute ---------- start>
 
 
 stops.addEventListener('click' , ()=>{
@@ -60,65 +92,22 @@ stops.addEventListener('click' , ()=>{
     start.disabled = false
 
 })
+// stop function  exciute ---------- end>
 
+
+// reset function  exciute ---------- start>
 
 reset.addEventListener('click' , ()=>{
     clearInterval(interval);
     seconds = 0
     div.innerHTML = '00'
-
+    
     minute = 0;
     mint.innerHTML = '00'
     hours = 0;
     hour.innerHTML = '00'
     start.disabled = false
 })
+// reset function  exciute ---------- end>
 
 
-
-// const div = document.querySelector('.second')
-// const mint = document.querySelector('.minuts')
-// const hour = document.querySelector('.hour')
-
-// const start = document.querySelector('.start');
-// const stops = document.querySelector('.stop');
-// const reset = document.querySelector('.reset');
-
-
-// let second = 0;
-// let interval;
-// let minutes = 0;
-// let hours = 0;
-// start.addEventListener('click', () => {
-//     interval = setInterval(() => {
-//         second += 1
-//         div.innerHTML = second
-//         if (second === 60) {
-//             minutes += 1;
-//             mint.innerHTML = minutes
-//             second = 0;
-//         }
-
-//         if (minutes === 60) {
-//             hours += 1;
-//             hour.innerHTML = hours
-//             minutes = 0;
-//         }
-//     }, 1000)
-//     start.disabled = true
-// })
-// stops.addEventListener('click', () => {
-//     clearInterval(interval);
-//     start.disabled = false
-// })
-// reset.addEventListener('click', () => {
-//     clearInterval(interval);
-//     second = 0
-//     div.innerHTML = '00'
-
-//     minutes = 0;
-//     mint.innerHTML = '00'
-//     hours = 0;
-//     hour.innerHTML = '00'
-//     start.disabled = false
-// })
