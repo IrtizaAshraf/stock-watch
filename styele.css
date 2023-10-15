@@ -1,12 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alumni+Sans+Collegiate+One:ital@1&family=Lilita+One&family=Merriweather:ital,wght@1,700&family=Pixelify+Sans&family=Young+Serif&display=swap');
+#head{
+      font-family: 'Young+Serif&display=swap';
+}
 
 
-
-/* body {
-      background-image:url("accets/bg\ watch.jpg");
-      background-repeat: no-repeat;
-      background-size: 100% ;
-      height: 100%;
-} */
 
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap');
@@ -19,11 +16,12 @@ html {
       height: 100%
 }
 
-#container{
-     /* margin-bottom: 50px; */
-      
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lilita+One&family=Merriweather:ital,wght@1,700&family=Pixelify+Sans&family=Young+Serif&display=swap');
+h1{
+      font-family: 'Young+Serif&display=swap';
 }
+
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Young+Serif&display=swap');
 button{
       font-size: 20px;
@@ -33,7 +31,8 @@ button{
       box-shadow: 3px 3px 2px 4px lightblue;
 }
 
- button:hover {
+
+button:hover {
       background-color: bisque;
       font-size: 20px;
       font-weight: 700;
@@ -42,7 +41,11 @@ button{
       box-shadow: 3px 3px 2px 4px rgb(215, 189, 140);
 }
 
-.text{
-      font-family: 'Merriweather:ital,wght@1,700&display=swap';
-}
 
+.text{
+      font-family: digital-clock;
+}
+@font-face {
+      font-family: digital-clock;
+      src: url(accets/DS-DIGIB.TTF);
+}
